@@ -1,0 +1,22 @@
+<h1>ברוכים הבאים לאפליקצייה שלי <span dir="ltr" id="appname">Messager </span></h1>
+
+<p span="intro">
+זה פשוט להתחיל
+<br />
+הקלד רשימה של מספרי טלפון המופרדים על ידי "," ושלח הודעה.
+<br />
+מופעל על ידי <span dir="ltr" id="appname">Nexmo: The Vonage API Platform</span>  
+</p>
+
+<h2>שלח פרטים כאן</h2>
+<%= form_tag("/messager/new", method: "post") do %>
+  <%= label_tag(:numbers, "מספרי טלפון") %>
+  <br />
+  <%= text_area_tag(:numbers, "02-123-4567, 03-123-4567, 04-123-4567", size: "24x6") %>
+  <br />
+  <%= label_tag(:message, "ההודעה") %>
+  <br />
+  <%= text_area_tag(:message, "מה אתה רוצה לומר", size: "24x6") %>
+  <br />
+  <%= submit_tag("שלח") %>
+<% end %>
