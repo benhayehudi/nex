@@ -1,5 +1,4 @@
-# __*It's All Greek To Me*__: <br /> 
-### __Broadcast Non-English SMS Messages with Rails and the Nexmo API__   
+# __*It's All Greek To Me*__: <br /> ## __Broadcast Non-English SMS Messages with Rails and the Nexmo API__   
 *Ben Greenberg*
 
 ## Overview
