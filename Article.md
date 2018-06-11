@@ -1,19 +1,19 @@
-# __*It's All Greek To Me*: Sending Broadcast Non-English SMS Messages With Rails and the Nexmo API__
+# __*It's All Greek To Me*__: <br /> __Sending Broadcast Non-English SMS Messages With Rails and the Nexmo API__
 ## *Ben Greenberg*
 
-# Overview
+## Overview
 
-# Prerequisites
+## Prerequisites
 
-# Step 1
+## Step 1
 
-# Step 2
+## Step 2
 
-# Step 3
+## Step 3
 
-# Conclusion
+## Conclusion
 
-# Further Reading
+## Further Reading
 
 
 
