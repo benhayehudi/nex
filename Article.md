@@ -11,7 +11,7 @@ Let's get started!
 
 In order to begin our tutorial we are going to require the following:
 
-* [A Nexmo account](https://dashboard.nexmo.com/sign-up) (free to sign up and get &euro;2 free credit!)
+* A [Nexmo account](https://dashboard.nexmo.com/sign-up) (free to sign up and get &euro;2 free credit!)
 * [Rails](https://rubyonrails.org/) installed on your computer
 * Basic comprehension of [Ruby](https://www.ruby-lang.org/en/documentation/)
 
