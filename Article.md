@@ -21,9 +21,15 @@ In order to begin our tutorial we are going to require the following:
 
 ## Installing the Nexmo Gem and Acquiring Our API Keys
 
-## Step 3
 
-## Conclusion
+
+## Creating Our Message Logic and View
+
+
+
+## To Recap
+
+
 
 ## Further Reading
 
