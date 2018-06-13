@@ -43,6 +43,8 @@ First, go ahead and open up the development configuration file found at `/config
 
  You can find the appropriate language code in the [Language Subtag Registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). For example, if we were building an application in Hebrew, we would use `he` and if we were building an application in Hungarian we would use `hu`. Additionally, if the language you are using is read from right to left and not left to right, you can also add `dir="rtl"` in the opening `<html>` tag so that the browser knows to render the content in the appropriate direction.
 
+ We are now ready to add the Nexmo Gem to our application and to acquire and safely store our API keys.
+
 ## Installing the Nexmo Gem and Acquiring Our API Keys
 
 
