@@ -11,7 +11,7 @@ Let's get started!
 
 In order to begin our tutorial we are going to require the following:
 
-* A [Nexmo account](https://dashboard.nexmo.com/sign-up) (free to sign up and get &euro;2 free credit!)
+* A [Nexmo account](https://dashboard.nexmo.com/sign-up) (free to sign up and get 2&euro; free credit!)
 * [Rails](https://rubyonrails.org/) installed on your computer
 * Basic comprehension of [Ruby](https://www.ruby-lang.org/en/documentation/)
 
@@ -47,7 +47,40 @@ First, go ahead and open up the development configuration file found at `/config
 
 ## Installing the Nexmo Gem and Acquiring Our API Keys
 
+At this point we are now ready to install the Nexmo gem in our application! The Nexmo gem facilitates our interaction with the Nexmo API and is a powerful tool to bring the full suite of communications potential into our application. While we are installing the Nexmo gem we are also going to include the [dotenv](https://github.com/bkeepers/dotenv) gem as well. Dotenv allows us to safely store confidential information like API keys without exposing them to the wider Internet. 
 
+In order to install the Nexmo gem open up your `Gemfile` found in the root directory of your project and add the following line near the top of the file:
+
+```ruby
+gem 'nexmo'
+```
+
+We also want to include the dotenv gem, but we only need it for development and testing, so we will group it in the `:development, :test` categories. Find the `group :development, :test` block in your `Gemfile` and add the following:
+
+```ruby
+gem 'dotenv-rails'
+```
+
+At this point after you save the file you are ready to incorporate these new gems into your app by executing the `bundle install` command from your command line. You will see in the output from the command that both the Nexmo and the dotenv-raisl gems were successfully installed. 
+
+There is just a couple more steps necessary to make sure that our API keys can be stored securely. First, add the following file to your root directory: `.env`. The `.env` file is where we will store our API keys. Secondly, are you planning to maintain this project with Git version control? If so, make sure to also add `.gitignore` to your root directory, if it is already not there, and make sure that you add `.env` in your `.gitignore` file. This will ensure that Git will not commit your private keys to the repository where they could potentially be viewed by others.
+
+Now let's obtain our API keys from Nexmo so we can interact with the Nexmo API and begin sending out SMS messages. This would be a good time to sign up for a free Nexmo account. You can do so by going to [https://dashboard.nexmo.com/sign-up](https://dashboard.nexmo.com/sign-up). It takes just a moment and once you are done you will discover 2&euro; of credit to begin exploring all that you can do. 
+
+After creating an account you will see your dashboard, which looks like this:
+
+![Nexmo Dashboard](nexmo-dashboard.png)
+
+As you can see there are two codes you need to access the API: the API key and the API secret. If you click the icon that looks like an eye you will reveal the API secret. Open up the `.env` file you created just a few moments ago and add the following:
+
+```ruby
+api_key=[YOUR API KEY]
+api_secret=[YOUR API SECRET]
+```
+
+Make sure to replace `[YOUR API KEY]` and `[YOUR API SECRET]` with your actual API key and API secret. 
+
+Congratulations you have now successfully installed the Nexmo gem, acquired your API keys and stored them safely and securely! You are now ready to go ahead and build your actual messenger logic and view. Let's dive in to our next step!
 
 ## Creating Our Message Logic and View
 
