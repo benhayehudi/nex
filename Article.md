@@ -61,7 +61,7 @@ We also want to include the dotenv gem, but we only need it for development and 
 gem 'dotenv-rails'
 ```
 
-At this point after you save the file you are ready to incorporate these new gems into your app by executing the `bundle install` command from your command line. You will see in the output from the command that both the Nexmo and the dotenv-raisl gems were successfully installed. 
+At this point after you save the file you are ready to incorporate these new gems into your app by executing the `bundle install` command from your command line. You will see in the output from the command that both the Nexmo and the dotenv-rails gems were successfully installed. 
 
 There is just a couple more steps necessary to make sure that our API keys can be stored securely. First, add the following file to your root directory: `.env`. The `.env` file is where we will store our API keys. Secondly, are you planning to maintain this project with Git version control? If so, make sure to also add `.gitignore` to your root directory, if it is already not there, and make sure that you add `.env` in your `.gitignore` file. This will ensure that Git will not commit your private keys to the repository where they could potentially be viewed by others.
 
