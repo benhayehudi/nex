@@ -25,7 +25,7 @@ rails new name-of-app
 
 At the time of initialization you can also specify the database you prefer, with `--database=[DATABASE]`. If you do not specify a database Rails will default to SQLite. You can also offer an additional flag of `-T` to skip installing the default unit tests. For example, with both flags specified your initialization would look like this: `rails new name-of-app --database=postgresql -T`, which would create a new Rails app running with a PostgreSQL database and no default tests installed. 
 
-Once the installation completes we can open up the new directory in our preferred code editor. There is going to be a few items we want to accomplish to make sure our application can handle non-English characters and that we have a safe place to store our eventual Nexmo API keys.
+Once the installation completes we can open up the new directory in our preferred code editor. There are a few items we want to accomplish to make sure our application can handle non-English characters.
 
 First, go ahead and open up the development configuration file found at `/config/environments/development.rb` and add the following line:
 
