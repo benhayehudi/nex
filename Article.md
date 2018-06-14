@@ -3,7 +3,7 @@
 
 ## Overview
 
-In this article we are going to demonstrate how to create a Ruby on Rails application to broadcast SMS messages to a list of phone numbers. There is a multitude of use cases for broadcasting messages to employees, customers or clients. Whether you want to share the latest sale with your loyal customers, update employees on an important update or notify your clients of an upcoming schedule change, the ability to broadcast that message easily and efficiently is integral. With the help of the Nexmo Ruby Gem and the Nexmo API we can easily create an application to accomplish this. We can leverage the built in Unicode support of the Nexmo API to send SMS messages in any language, including languages that are not based on English characters, like Hebrew, Mandarin or Arabic.
+In this article we are going to demonstrate how to create a Ruby on Rails application to broadcast SMS messages to a list of phone numbers. There are a multitude of use cases for broadcasting messages to employees, customers or clients. Whether you want to share the latest sale with your loyal customers, update employees on an important announcement or notify your clients of an upcoming schedule change, the ability to broadcast that message easily and efficiently is integral. With the help of the Nexmo Ruby Gem and the Nexmo API we can easily create an application to accomplish this. We can leverage the built in Unicode support of the Nexmo API to send SMS messages in any language, including languages that are not based on English characters, like Hebrew, Mandarin or Arabic.
 
 Let's get started!
 
