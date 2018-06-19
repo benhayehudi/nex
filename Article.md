@@ -104,7 +104,7 @@ end
 
 This is a brand new Rails model just waiting for us to give it some code! 
 
-We are going to create a class method that will be accessible to all the subsequent code that references our messenger class. For clarity sake, let's call our method `send_message`. First we need to initialize a new Nexmo client using our API key and API secret. Then we need to build the text message we want to send, keeping the receipient phone number and message dynamically generated based on the content our application gives to it. Lastly, we'll output some feedback to ourselves so we know whether it sent successfully, and if not, what error message we received back from the Nexmo API. This is what it all looks like put together:
+We are going to create a class method that will be accessible to all the subsequent code that references our messenger class. For clarity sake, let's call our method `send_message`. First, we need to initialize a new Nexmo client using our API key and API secret. Then, we need to build the text message we want to send, keeping the receipient phone number and message dynamically generated based on the content our application gives to it. Lastly, we'll output some feedback to ourselves so we know whether it sent successfully, and if not, what error message we received back from the Nexmo API. This is what it all looks like put together:
 
 ```ruby
 def self.send_message(number, message)
@@ -127,7 +127,7 @@ end
 
 Within the creation of our `client` you will notice the usage of `ENV['api_key']` and `ENV['api_secret']`, which is referencing the variables we set in the `.env` file. We reference them as environment variables using the `ENV[ ]` format. 
 
-Along with our API keys we also need a Nexmo phone number to send SMS messages from. That number is entered between the single quotes on the `from:` line in the creation of our `response`. As part of your free Nexmo trial you will have access to a trial phone number from which you can send messages from. Looking again at our Nexmo dashboard, the second half of the dashboard begins with "Try the API" and in that section is a `curl` command pre-made for you. In that `curl` command is your Nexmo trial phone number on the penultimate line of the command that begins with `-d from=`.  
+Along with our API keys, we also need a Nexmo phone number to send SMS messages from. That number is entered between the single quotes on the `from:` line in the creation of our `response`. As part of your free Nexmo trial you will have access to a trial phone number from which you can send messages. Looking again at our Nexmo dashboard, the second half of the dashboard begins with "Try the API" and in that section is a `curl` command pre-made for you. In that `curl` command is your Nexmo trial phone number on the penultimate line of the command that begins with `-d from=`.  
 
 Also, as part of our `response` you can see the `to:` and the `text:` fields are set to the heretofore undefined `number` and `message` keywords. These are referencing variables that we define in the creation of our method. They will be filled in with actual data that our controller will send to the method.
 
@@ -145,7 +145,7 @@ class MessengerController < ApplicationController
 end
 ```
 
-Our application is going to have the capability to take in a list of phone numbers in order to broadcast an SMS message to each one of them. In that case we want to use an iterator to loop over a call to our model method for each phone number. We also want to turn our string of phone numbers into a data structure that can be iterated over, like an array, for example. We will use the `.split()` function to separate our string of phone numbers into an array. We need to give the function a character by which to split the numbers. Let's tell our users to provide us the phone numbers separated by a ',' and we'll `.split()` with the ',' as well. 
+Our application is going to have the capability to take in a list of phone numbers in order to broadcast an SMS message to each one of them. In that case, we want to use an iterator to loop over a call to our model method for each phone number. We also want to turn our string of phone numbers into a data structure that can be iterated over, like an array, for example. We will use the `.split()` function to separate our string of phone numbers into an array. We need to give the function a character by which to split the numbers. Let's tell our users to provide us the phone numbers separated by a ',' and we'll `.split()` with the ',' as well. 
 
 Once we have an array of phone numbers we can go ahead and send them to our model method:
 
@@ -214,7 +214,7 @@ And now let's use the Rails form helper syntax to build out our form:
 <% end %>
 ```
 
-Finally, we want to make sure our application routes our paths correctly. In the `routes.rb` file located in `/config/` add the following two lines:
+Finally, we want to make sure our application routes our paths correctly. In the `routes.rb` file, located in `/config/`, add the following two lines:
 
 ```ruby
 root 'messenger#index'
@@ -226,7 +226,7 @@ Way to go! If you made it this far, you now have a fully functioning Rails appli
 
 ## To Recap
 
-In this walkthrough we accomplished quite a lot. We learned how to setup a Rails application and how to leverage the Nexmo Ruby gem to communicate with the Nexmo API. We learned how to acquire our API keys and how to safely and securely store them while also taking advantage of version control with Git. We built an application that utilizes Nexmo's unicode capability to send SMS messages in any language, from Albanian to Zulu, regardless of the type of characters used in the language. 
+In this walkthrough we accomplished quite a lot. We learned how to setup a Rails application and how to leverage the Nexmo Ruby gem to communicate with the Nexmo API. We learned how to acquire our API keys and how to safely and securely store them, while also taking advantage of version control with Git. We built an application that utilizes Nexmo's unicode capability to send SMS messages in any language, from Albanian to Zulu, regardless of the type of characters used in the language. 
 
 This is just the tip of the iceberg of what can be accomplished with Nexmo to communicate with a global audience, whether you are building intelligent chatbots or synthesizing human speech, you can find the resources to help make that possible with Nexmo.
 
